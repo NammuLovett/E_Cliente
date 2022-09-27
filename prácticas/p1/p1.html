@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica 1</title>
+  </head>
+  <body>
+    <script>
+      /*Crea una página web que pida al usuario un número a través de un cuadro de diálogo.
+➢ Otro cuadro de diálogo nos dirá si lo que escribió el usuario era realmente un número o no.
+➢ En caso de que no sea un número volverá a solicitarlo al usuario.
+➢ Comenta adecuadamente el código.
+➢ Usa un script dentro de la misma página.*/
+
+      let num = 0;
+      num = prompt("Introduce un número"); //Le solicita un número al usuario
+
+      while (isNaN(num)) {
+        //Mientras que el dato que le solicita al usuario no sea un número, va a ejecutar el prompt y no hace falta usar el parseInt.
+        alert(`${num} no es un número`);
+        num = prompt("Introduce un número");
+      }
+      alert(`El número que ha introducido es el ${num}`);
+    </script>
+  </body>
+</html>

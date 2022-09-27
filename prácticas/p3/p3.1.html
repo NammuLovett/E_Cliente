@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica 3</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      div {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background-color: rgb(45, 141, 121)"></div>
+    <script>
+      let x = parseInt(Math.random() * 256);
+      let y = parseInt(Math.random() * 256);
+      let z = parseInt(Math.random() * 256);
+      let bgColor = "rgb(" + x + "," + y + "," + z + ")";
+      document.write(`<div style="background-color:${bgColor}> </div>`);
+    </script>
+  </body>
+</html>

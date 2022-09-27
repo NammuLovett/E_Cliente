@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo</title>
+  </head>
+  <body>
+    <p id="parrafo"></p>
+    <script>
+      let nombre = prompt('Introduce tu nombre');
+      let apellidos = prompt('introduce tus apellidos');
+      let direccion = prompt('Introduce tu dirección');
+      let tlf = prompt('Introduce tu teléfono');
+      let dni = prompt('Introduce tu DNI');
+
+      let datos = `Mi nombre es ${nombre}, mi apellido es ${apellidos}, mi dirección es ${direccion}, mi teléfono es ${tlf} y mi dni es ${dni}`;
+
+      alert(datos);
+      document.write(datos);
+      document.getElementById('parrafo').innerHTML = datos;
+    </script>
+  </body>
+</html>

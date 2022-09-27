@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      En el documento →Todos los pares entre el 1 y el 15.
+      o Por consola → Aparecerá el número de iteración con el mensaje “Iteración: x”.
+      o Por cuadro de diálogo → El número de pares encontrados.
+      */
+
+      let contador = 0;
+
+      for (let i = 1; i <= 15; i++) {
+        console.log(`iteración Nº ${i}`);
+        if (i % 2 == 0) {
+          contador++;
+        }
+      }
+      alert(contador);
+    </script>
+  </body>
+</html>
