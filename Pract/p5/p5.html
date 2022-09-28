@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica 5</title>
+  </head>
+  <body>
+    <script>
+      for (let i = 0; i < 2000; i++) {
+        let x = parseInt(Math.random() * 256);
+        let y = parseInt(Math.random() * 256);
+        let z = parseInt(Math.random() * 256);
+        let pos1 = parseInt(Math.random() * 101);
+        let pos2 = parseInt(Math.random() * 101);
+        //Hago 2 variables de aleatorio para que no coincidan a la hora de generar el cuadrado.
+        //Generamos tres números aleatorios para r g b
+        let bgColor = `rgb(${x},${y},${z})`; //meto los núneros en una variable para que sea más sencillo de manejar
+        document.write(
+          `<div style="position: absolute; background-color:${bgColor}; height:50px; width:50px; top:${pos1}%; left:${pos2}%"></div>`
+        );
+      }
+      //Con el document.write introduzco un div con el style de cuadrados aleatorios para que lo inyecte todas las propiedades del CSS.
+    </script>
+  </body>
+</html>
