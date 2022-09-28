@@ -16,3 +16,5 @@ while (num != randomNum) {
   num > randomNum ? alert('El número es menor') : alert('El número es mayor');
   contador++;
 }
+
+document.write(`<h2>Has necesitado${contador} intentos</h2>`);
