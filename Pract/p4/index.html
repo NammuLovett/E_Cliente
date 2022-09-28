@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 4</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(255, 240, 107);
+      }
+      h2 {
+        text-align: center;
+        margin-top: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      /*
+
+      Crea una aplicación web en cuadros de lectura de datos:
+      el nombre,apellidos, el salario (número con decimales) y la edad de una persona (un número)
+
+              Funcionamiento:
+      ➢ Si el salario es mayor de 2000 euros, no cambiará.
+      ➢ Si el salario está entre 1000 y 2000:
+        o Si además la edad es mayor de 45 años, se sube un 3%.
+        o Si la edad es menor de 45 o igual, se sube un 10%.
+      ➢ Si el salario indicado es menor de 1000
+        o Los menores de 30 años cobrarán exactamente 1100 euros.
+        o Si la edad es de 30 a 45 años, el salario sube un 3%.
+        o A los mayores de 45 años, sube un 15%.
+
+        Salida:
+      ➢ La página indicará el nombre y apellidos escritos, la edad y el salario (una vez
+      recalculado con lo que indican los puntos anteriores).*/
+      "use strict";
+
+      let name = prompt("Introduce tu nombre");
+      let surname = prompt("Introduce tu apellido");
+      let salary = prompt("Introduce tu salario");
+      let age = prompt("Introduce tu edad");
+
+      if (salary > 1000 && salary < 2000) {
+        if (age > 45) {
+          salary *= 1.03;
+        } else {
+          salary *= 1.1;
+        }
+      } else if (salary < 1000) {
+        if (age < 30) {
+          salary = 1100;
+        } else if (age >= 30 && age <= 45) {
+          salary *= 1.03;
+        } else if (age > 45) {
+          salary *= 1.15;
+        }
+      }
+
+      document.write(
+        `<h2>¡Hola ${name} ${surname}! tienes ${age} años y tu salario es ${salary} </h2>`
+      );
+    </script>
+  </body>
+</html>
