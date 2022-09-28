@@ -20,30 +20,13 @@
   </head>
   <body>
     <script>
-      /*
-
-      Crea una aplicación web en cuadros de lectura de datos:
-      el nombre,apellidos, el salario (número con decimales) y la edad de una persona (un número)
-
-              Funcionamiento:
-      ➢ Si el salario es mayor de 2000 euros, no cambiará.
-      ➢ Si el salario está entre 1000 y 2000:
-        o Si además la edad es mayor de 45 años, se sube un 3%.
-        o Si la edad es menor de 45 o igual, se sube un 10%.
-      ➢ Si el salario indicado es menor de 1000
-        o Los menores de 30 años cobrarán exactamente 1100 euros.
-        o Si la edad es de 30 a 45 años, el salario sube un 3%.
-        o A los mayores de 45 años, sube un 15%.
-
-        Salida:
-      ➢ La página indicará el nombre y apellidos escritos, la edad y el salario (una vez
-      recalculado con lo que indican los puntos anteriores).*/
       "use strict";
 
       let name = prompt("Introduce tu nombre");
       let surname = prompt("Introduce tu apellido");
       let salary = prompt("Introduce tu salario");
       let age = prompt("Introduce tu edad");
+      // Pido los datos de cada variable por el prompt
 
       if (salary > 1000 && salary < 2000) {
         if (age > 45) {
@@ -61,8 +44,11 @@
         }
       }
 
+      //He hecho un par de IFs anidados con las condiciones que dice el ejercicio.
+
       document.write(
         `<h2>¡Hola ${name} ${surname}! tienes ${age} años y tu salario es ${salary} </h2>`
+        //Mediante un document.write he inyectado un H2 para mostrar el resultado.
       );
     </script>
   </body>
