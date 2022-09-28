@@ -21,8 +21,10 @@
       let x = parseInt(Math.random() * 256);
       let y = parseInt(Math.random() * 256);
       let z = parseInt(Math.random() * 256);
-      let bgColor = "rgb(" + x + "," + y + "," + z + ")";
+      //Generamos tres números aleatorios para r g b
+      let bgColor = `rgb(${x},${y},${z})`; //meto los núneros en una variable para que sea más sencillo de manejar
       document.write(`<div style="background-color:${bgColor}"> </div>`);
+      //Con el document.write introduzco un div con el style aleatorio para que lo inyecte al refrescar.
     </script>
   </body>
 </html>
