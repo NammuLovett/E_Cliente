@@ -1,10 +1,8 @@
 'use strict';
 
-let randomNum = parseInt(Math.random() * 1001);
-document.write(`<h2>${randomNum}</h2>`);
-
 let num = 0;
 let contador = 0;
+let randomNum = parseInt(Math.random() * 1001);
 num = prompt('Adivina el número comprendido entre 1 y 1000'); //Le solicita un número al usuario
 
 while (isNaN(num)) {
@@ -14,8 +12,16 @@ while (isNaN(num)) {
 }
 
 while (num != randomNum) {
-  num > randomNum ? alert('El número es menor') : alert('El número es mayor');
-  contador++;
+  if (num > randomNum) {
+    alert('El número que tienes que acertar es más bajo');
+    num = prompt('Introduce un número');
+    contador++;
+  } else {
+    alert('El número que tienes que acertar es más alto');
+    num = prompt('Introduce un número');
+    contador++;
+  }
 }
-
-document.write(`<h2>Has necesitado${contador} intentos</h2>`);
+document.write(
+  `<h2>Enhorabuena, has acertado, el número era el ${randomNum} y has necesitado ${contador} intentos</h2>`
+);
