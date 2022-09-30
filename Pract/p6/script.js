@@ -2,8 +2,8 @@
 
 let num = 0;
 let contador = 0;
-let randomNum = parseInt(Math.random() * 1001);
-num = prompt('Adivina el número comprendido entre 1 y 1000'); //Le solicita un número al usuario
+let randomNum = parseInt(Math.random() * 101);
+num = prompt('Adivina el número comprendido entre 1 y 100'); //Le solicita un número al usuario
 
 while (isNaN(num)) {
   //Mientras que el dato que le solicita al usuario no sea un número, va a ejecutar el prompt y no hace falta usar el parseInt.
@@ -23,5 +23,8 @@ while (num != randomNum) {
   }
 }
 document.write(
-  `<h2>Enhorabuena, has acertado, el número era el ${randomNum} y has necesitado ${contador} intentos</h2>`
+  `<h2>Enhorabuena, has acertado, el número era el </br>
+  ${randomNum} </br> y has necesitado ${contador} intentos</h2>
+  <input type="button" value="Jugar de nuevo" onclick="location.reload()"/>
+  `
 );

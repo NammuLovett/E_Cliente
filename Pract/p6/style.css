@@ -8,3 +8,8 @@ h2 {
   text-align: center;
   margin-top: 400px;
 }
+input {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
