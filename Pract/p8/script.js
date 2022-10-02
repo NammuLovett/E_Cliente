@@ -66,5 +66,4 @@ for (let i = 0; i < strArr.length; i++) {
     newStrArr.push(strArr[i]); //Si es un ' ', metemos una posición vacía en el array
   }
 }
-
 document.write(`<h2>Su clave es ${newStrArr.join('')}</h2>`); //Metemos un join para mostrar el array
