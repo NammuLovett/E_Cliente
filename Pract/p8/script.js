@@ -36,7 +36,9 @@ const alfa = [
 ];
 
 while (isNaN(key) || key < 1 || key > 100) {
-  key = prompt('Introduce para la clave un número entre el 1 y el 100');
+  key = parseInt(
+    prompt('Introduce para la clave un número entre el 1 y el 100')
+  );
 }
 
 while (!isNaN(str) || str.length === 0) {
@@ -51,15 +53,29 @@ console.log(strArr); //Transforma la cadena en array
 //HOLA
 
 for (let i = 0; i < strArr.length; i++) {
-  for (let j = 0; j < alfa.length; j++) {
-    if (strArr[i].toUpperCase() == alfa[j]) {
-      let santi = j + key;
-      let newVar = alfa[santi];
-      newStrArr.push(newVar);
+  console.log(strArr[i]);
+  if (
+    strArr[i] != ' ' &&
+    strArr[i] != '?' &&
+    strArr[i] != '¿' &&
+    strArr[i] != '!' &&
+    strArr[i] != '¡' &&
+    strArr[i] != ',' &&
+    strArr[i] != '.'
+  ) {
+    for (let j = 0; j < alfa.length; j++) {
+      if (strArr[i].toUpperCase() == alfa[j]) {
+        let sumKey = j + key;
+        if (sumKey > 26) {
+          sumKey -= 27;
+        }
+        let newVar = alfa[sumKey];
+        newStrArr.push(newVar);
+      }
     }
+  } else {
+    newStrArr.push(strArr[i]);
   }
 }
 
-console.log(newStrArr);
-console.logs();
-/* document.write(`<h2>Su clave es ${newStrArr.join}</h2>`); */
+document.write(`<h2>Su clave es ${newStrArr.join('')}</h2>`);
