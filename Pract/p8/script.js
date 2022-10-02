@@ -49,7 +49,6 @@ let strArr = Array.from(str);
 console.log(strArr); //Transforma la cadena en array
 
 //Recorremos y comparamos los arrays para cambiar la letra por la clave
-//HOLA
 
 for (let i = 0; i < strArr.length; i++) {
   console.log(strArr[i]);
