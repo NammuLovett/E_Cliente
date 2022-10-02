@@ -49,23 +49,22 @@ let strArr = Array.from(str);
 console.log(strArr); //Transforma la cadena en array
 
 //Recorremos y comparamos los arrays para cambiar la letra por la clave
-
 for (let i = 0; i < strArr.length; i++) {
-  console.log(strArr[i]);
   if (strArr[i] != ' ') {
     for (let j = 0; j < alfa.length; j++) {
       if (strArr[i].toUpperCase() == alfa[j]) {
         let sumKey = j + key;
+        //Si la suma es mayor que 26 que es la última letra, se le resta para que empiece de 0.
         if (sumKey > 26) {
           sumKey -= 27;
         }
-        let newVar = alfa[sumKey];
-        newStrArr.push(newVar);
+        let newVar = alfa[sumKey]; //Creamos una nueva variable para la referencia nueva del abecedario
+        newStrArr.push(newVar); //meterá el caracter en el array
       }
     }
   } else {
-    newStrArr.push(strArr[i]);
+    newStrArr.push(strArr[i]); //Si es un ' ', metemos una posición vacía en el array
   }
 }
 
-document.write(`<h2>Su clave es ${newStrArr.join('')}</h2>`);
+document.write(`<h2>Su clave es ${newStrArr.join('')}</h2>`); //Metemos un join para mostrar el array
