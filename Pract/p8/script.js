@@ -35,12 +35,11 @@ const alfa = [
   'Z',
 ];
 
-while (isNaN(key) || key < 1 || key > 100) {
+while (isNaN(key) || key < 1 || key > 26) {
   key = parseInt(
-    prompt('Introduce para la clave un número entre el 1 y el 100')
+    prompt('Introduce para la clave un número entre el 1 y el 26')
   );
 }
-
 while (!isNaN(str) || str.length === 0) {
   // No puede estar vacío o número ) {
   str = prompt('Introduce un texto para cifrar');
@@ -54,15 +53,7 @@ console.log(strArr); //Transforma la cadena en array
 
 for (let i = 0; i < strArr.length; i++) {
   console.log(strArr[i]);
-  if (
-    strArr[i] != ' ' &&
-    strArr[i] != '?' &&
-    strArr[i] != '¿' &&
-    strArr[i] != '!' &&
-    strArr[i] != '¡' &&
-    strArr[i] != ',' &&
-    strArr[i] != '.'
-  ) {
+  if (strArr[i] != ' ') {
     for (let j = 0; j < alfa.length; j++) {
       if (strArr[i].toUpperCase() == alfa[j]) {
         let sumKey = j + key;
