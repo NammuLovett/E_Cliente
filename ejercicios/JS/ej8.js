@@ -11,7 +11,6 @@ let gente = [];
 let persona = [];
 
 for (let i = 0; i < 3; i++) {
-  alert(persona);
   for (let j = 0; j < 6; j++) {
     j == 0
       ? (persona[0] = prompt('Introduce el nombre del alumno'))
