@@ -7,18 +7,17 @@
 4) Las posiciones de la 1 a la 5 guardarán las notas de cada alumno, también introducidas por el usuario. El programa pide notas en el formato “Introduce nota x para el alumno y:”
 5) Por último, usando el método document.write() mostrará en el documento web las 5 notas de
 cada alumno en formato: */
-let gente = [[], [], []];
+let gente = [];
 let persona = [];
 
-for (let j = 0; j < 3; j++) {
+for (let i = 0; i < 3; i++) {
   alert(persona);
-  for (let i = 0; i < 6; i++) {
-    i == 0
+  for (let j = 0; j < 6; j++) {
+    j == 0
       ? (persona[0] = prompt('Introduce el nombre del alumno'))
-      : (persona[i] = prompt(`Nota ${i}`));
+      : (persona[j] = prompt(`Nota ${j}`));
   }
-  gente[j].push(persona);
-  console.log(gente);
+  gente = persona;
 }
 
 console.log(gente);
