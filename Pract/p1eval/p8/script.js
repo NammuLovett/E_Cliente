@@ -6,10 +6,10 @@ let pswd = '';
 let suma = 0;
 
 while (key < 1 || key > 100) {
-  key = prompt('Escribe el valor de cifrado entre 1-100');
+  key = prompt('Escribe la clave de cifrado entre 1-100');
 }
 while (frase.valueOf() == '') {
-  frase = prompt('Escribe la cadena a descifrar');
+  frase = prompt('Escribe lo que quiere cifrar');
 }
 
 for (i = 0; i < frase.length; i++) {
