@@ -10,7 +10,6 @@ const nameReg = /(?=.*[A-Z])(.*[0-9]).*/;
 const contReg = /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W).*/;
 
 let userName = '';
-let psw = '';
 
 while (userName.length === 0 || !user.match(nameReg)) {
   userName = prompt(
@@ -18,6 +17,7 @@ while (userName.length === 0 || !user.match(nameReg)) {
   );
   console.log(userName);
 }
+let psw = '';
 alert(`El usuario ya está, ${userName}`);
 while (psw.length === 0 || !user.match(contReg)) {
   psw = prompt(
