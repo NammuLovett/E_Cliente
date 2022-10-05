@@ -18,7 +18,7 @@ while (userName.length === 0 || !user.match(nameReg)) {
   );
   console.log(userName);
 }
-
+alert(`El usuario ya está, ${userName}`);
 while (psw.length === 0 || !user.match(contReg)) {
   psw = prompt(
     'Introduce una contraseña correcta que debe tener al menos una letra mayúscula, minúscula, número y caracter alternativo'
