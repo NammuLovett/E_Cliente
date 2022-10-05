@@ -6,21 +6,23 @@ o Una letra minúscula
 o Un número
 o Un carácter que no sea letra ni número */
 
-const nameReg = /(?=.*[A-Z])(.*[0-9]).*/;
+let userName = '';
+let passw = '';
+//Expresiones regulares
+const nameReg = /(?=.*[a-z]).*/;
 const contReg = /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W).*/;
 
-let userName = '';
-
-while (userName.length === 0 || !user.match(nameReg)) {
+while (userName.length == 0 || !userName.match(nameReg)) {
   userName = prompt(
-    'Introduce un nombre de usuario correcto que debe tener al menos 1 minúscula'
-  );
-  console.log(userName);
-}
-let psw = '';
-alert(`El usuario ya está, ${userName}`);
-while (psw.length === 0 || !user.match(contReg)) {
-  psw = prompt(
-    'Introduce una contraseña correcta que debe tener al menos una letra mayúscula, minúscula, número y caracter alternativo'
+    'Introduce un nombre válido, debe tener 1 o más letras en minúscula'
   );
 }
+console.log(userName);
+while (passw.length == 0 || !passw.match(contReg)) {
+  passw = prompt(
+    'Introduce una contraseña válida, debe tener al menos 1 Mayúscula, 1 minúscula, 1 número y un caracter especial'
+  );
+}
+console.log(passw);
+document.write(`<p><h2>Tu nombre de usuario es ${userName}</h2></p>`);
+document.write(`<p><h2>Tu contraseña es ${passw}</h2></p>`);

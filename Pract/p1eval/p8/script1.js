@@ -40,7 +40,7 @@ while (isNaN(key) || key < 1 || key > 26) {
     prompt('Introduce para la clave un número entre el 1 y el 26')
   );
 }
-while (!isNaN(str) || str.length === 0) {
+while (!isNaN(str) || str.length == 0) {
   // No puede estar vacío o número ) {
   str = prompt('Introduce un texto para cifrar');
 }
