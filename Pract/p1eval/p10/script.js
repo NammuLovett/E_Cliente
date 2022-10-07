@@ -33,7 +33,7 @@ let frase = '';
 let pswd = '';
 let suma = 0;
 
-while (key < 1 || key > CDATASection) {
+while (isNaN(key) || key < 1 || key > 1000000) {
   key = prompt('Escribe la clave de cifrado entre 1-1000000');
 }
 while (frase.valueOf() == '') {
@@ -48,7 +48,6 @@ for (let i = 0; i < fraseArray.length; i++) {
 }
 
 document.write(`<h2>La nueva contraseña es ${pswd}</h2>`);
-
 /* for (i = 0; i < frase.length; i++) {
   //En este for lo que hacemos es crear la frase sumando el valor que nos ha dado en su caracter unicode
   //frase.charCodeAt(i) = parseInt(frase.charCodeAt(i)) + parseInt(num);

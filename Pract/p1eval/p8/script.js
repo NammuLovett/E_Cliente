@@ -5,7 +5,7 @@ let frase = '';
 let pswd = '';
 let suma = 0;
 
-while (key < 1 || key > 100) {
+while (isNaN(key) || key < 1 || key > 100) {
   key = prompt('Escribe la clave de cifrado entre 1-100');
 }
 while (frase.valueOf() == '') {
