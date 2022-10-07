@@ -25,4 +25,4 @@ for (i = 0; i < frase.length; i++) {
 
 //console.log(frase);
 
-alert(`La nueva contraseña es ${pswd}`);
+document.write(`<h2>La nueva contraseña es ${pswd}<h2/>`);
