@@ -1,4 +1,5 @@
 /* [ PRACTICA ]
+
 Vamos a mejorar el cifrado anterior en el que cada letra siempre se va a corresponder con
 la misma letra cifrada (lo que facilita su descifrado).
 Por ello, en lugar de pedir un número que se sume a cada carácter pediremos un grupo
@@ -28,7 +29,7 @@ Salida:
 diálogo.
 template-literal !!
 */
-
+/* El cifrado César consiste en tomar cada letra de un mensaje y desplazarla en el alfabeto el número que diga una clave. Por ejemplo, la letra A desplazada con clave 2, se convertirá en C. Aunque el cifrado César funciona con un alfabeto completo y por desplazamiento (en el ejemplo anterior la letra Z se suele convertir en B) se pide crear una página que pida al usuario un texto y una clave y escriba el mismo texto, pero desplazando los caracteres en la tabla Unicode el número que indique la clave. */
 let key = 0;
 let frase = '';
 
@@ -36,32 +37,29 @@ let pswd = '';
 let suma = 0;
 
 while (isNaN(key) || key < 1 || key > 1000000) {
-  key = prompt('Escribe la clave de cifrado entre 1-1000000');
+  key = prompt('Escribe la clave de cifrado entre 1-100000');
 }
 while (frase.valueOf() == '') {
   frase = prompt('Escribe lo que quiere cifrar');
 }
 
-let keyArray = Array.from(frase);
-let fraseArray = Array.from(frase);
+let j = 0;
 
-for (let i = 0; i < fraseArray.length; i++) {
-  pswd += fraseArray(i) + parseInt(keyArray);
-}
-
-document.write(`<h2>La nueva contraseña es ${pswd}</h2>`);
-/* for (i = 0; i < frase.length; i++) {
+for (i = 0; i < frase.length; i++) {
   //En este for lo que hacemos es crear la frase sumando el valor que nos ha dado en su caracter unicode
   //frase.charCodeAt(i) = parseInt(frase.charCodeAt(i)) + parseInt(num);
 
-  console.log(frase.charCodeAt(i));
-  console.log(parseInt(frase.charCodeAt(i)) + parseInt(key));
+  //console.log(frase.charCodeAt(i));
+  //console.log(parseInt(frase.charCodeAt(i)) + parseInt(key));
 
-  pswd += String.fromCharCode(frase.charCodeAt(i) + parseInt(key));
+  pswd += String.fromCharCode(frase.charCodeAt(i) + parseInt(key.charAt(j)));
+  j++;
+  if (j == key.length) {
+    j = 0;
+  }
   //pswd = String.fromCharCode(pswd);
 }
 
 //console.log(frase);
 
-alert(`La nueva contraseña es ${pswd}`);
- */
+document.write(`<h2>La nueva contraseña es ${pswd}<h2/>`);
