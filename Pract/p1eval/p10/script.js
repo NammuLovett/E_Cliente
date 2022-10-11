@@ -9,9 +9,11 @@ Clave: 22345
 El cifrado consistirá en aplicar de forma cíclica en una tabla Unicode el siguiente cálculo:
 H+2, o+2, l+3, a+4, “ “+5, c+2, a+2, r+3, a+4, c+5, o+2, l+2, a+3
 Resultando: Jqoe%ecuehqnd
+
 A tener en cuenta:
 ➢ El resultado se mostrará usando el método document.write()
 ➢ El código JavaScript se puede hacer inscrito en el mismo documento.
+
 Funcionamiento:
 ✓ La clave introducida por el usuario debe ser un número válido que no sea inferior a 1
 ni superior a (por ejemplo) 1000000.
@@ -26,3 +28,40 @@ Salida:
 diálogo.
 template-literal !!
 */
+
+let key = 0;
+let frase = '';
+
+let pswd = '';
+let suma = 0;
+
+while (isNaN(key) || key < 1 || key > 1000000) {
+  key = prompt('Escribe la clave de cifrado entre 1-1000000');
+}
+while (frase.valueOf() == '') {
+  frase = prompt('Escribe lo que quiere cifrar');
+}
+
+let keyArray = Array.from(frase);
+let fraseArray = Array.from(frase);
+
+for (let i = 0; i < fraseArray.length; i++) {
+  pswd += fraseArray(i) + parseInt(keyArray);
+}
+
+document.write(`<h2>La nueva contraseña es ${pswd}</h2>`);
+/* for (i = 0; i < frase.length; i++) {
+  //En este for lo que hacemos es crear la frase sumando el valor que nos ha dado en su caracter unicode
+  //frase.charCodeAt(i) = parseInt(frase.charCodeAt(i)) + parseInt(num);
+
+  console.log(frase.charCodeAt(i));
+  console.log(parseInt(frase.charCodeAt(i)) + parseInt(key));
+
+  pswd += String.fromCharCode(frase.charCodeAt(i) + parseInt(key));
+  //pswd = String.fromCharCode(pswd);
+}
+
+//console.log(frase);
+
+alert(`La nueva contraseña es ${pswd}`);
+ */

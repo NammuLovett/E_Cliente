@@ -5,7 +5,7 @@ let frase = '';
 let pswd = '';
 let suma = 0;
 
-while (key < 1 || key > 100) {
+while (isNaN(key) || key < 1 || key > 100) {
   key = prompt('Escribe la clave de cifrado entre 1-100');
 }
 while (frase.valueOf() == '') {
@@ -25,4 +25,4 @@ for (i = 0; i < frase.length; i++) {
 
 //console.log(frase);
 
-alert(`La nueva contraseña es ${pswd}`);
+document.write(`<h2>La nueva contraseña es ${pswd}<h2/>`);
