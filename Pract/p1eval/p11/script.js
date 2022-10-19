@@ -21,7 +21,7 @@ while (userName.length == 0 || !userName.match(nameReg)) {
 // 14 - validar un DNI Deberá constar de 9 caracteres alfanuméricos. El primero puede ser un número o un carácter K, L, X, Y, Z  El último puede ser un carácter entre TRWAGMYFPDXBNJZSQVHLCKE. El resto de caracteres son numéricos
 
 let userDni = prompt('Por favor introduce tu DNI');
-let numUserDni = userDni.substring(0, 8);
+let numUserDni = userDni.substring(1, 8);
 let userLetra = userDni.substring(8, 9);
 
 while (
