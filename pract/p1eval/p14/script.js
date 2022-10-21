@@ -9,7 +9,7 @@ function cambiaColor() {
   document.body.style.background = bgColor; //modificamos el objeto body style background y recibe el número aleatorio
 }
 
-setInterval(cambiaColor, 1000);
+setInterval(cambiaColor, 2000);
 
 /* 
 let parImpar = (value) => {
