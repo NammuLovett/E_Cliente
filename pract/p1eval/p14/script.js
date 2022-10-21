@@ -10,13 +10,3 @@ function cambiaColor() {
 }
 
 setInterval(cambiaColor, 2000);
-
-/* 
-let parImpar = (value) => {
-    return value % 2 == 0 ? 'par' : 'impar';
-  };
-
-  setInterval(func, 1000);
-  setTimeout;
-
-  document.write(parImpar(78)); */
