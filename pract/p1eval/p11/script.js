@@ -21,39 +21,19 @@ while (userName.length == 0 || !userName.match(nameReg)) {
 // 14 - validar un DNI Deberá constar de 9 caracteres alfanuméricos. El primero puede ser un número o un carácter K, L, X, Y, Z  El último puede ser un carácter entre TRWAGMYFPDXBNJZSQVHLCKE. El resto de caracteres son numéricos
 
 let userDni = prompt('Por favor introduce tu DNI');
+const dniReg =
+  /^[KLXYZklxyz0-9][0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKEtrwagmyfpdxbnjzsqvhlcke]$/;
 let numUserDni = userDni.substring(1, 8);
 let userLetra = userDni.substring(8, 9);
 
-while (
-  userDni.length != 9 || //No puede tener menos de 9 caracteres.
-  userDni.length === 0 || // No puede estar vacío = 0
-  isNaN(numUserDni) || //los 8 primeros caracteres tiene que ser un número
-  !isNaN(userLetra) // el último caracter debe ser una letra
-) {
+while (userName.length == 0 || !userDni.match(dniReg)) {
   userDni = prompt(
     'Por favor introduce tu DNI válido, debe tener los 9 caracteres, 8 números y una letra válida al final'
   );
 }
 
-//Si hemos llegado hasta aquí significa que vamos bien y necesitamos comprobar ahora que la letra es correcta.
-
-const letra = 'TRWAGMYFPDXBNJZSQVHLCKE'; //letras que debe tener el DNI en el orden
-let pos = numUserDni % 23; //El resto nos indica la posición de la letra anterior
-
-if (userLetra.toUpperCase == letra.charAt(pos)) {
-  //Si la letra del usuario, forzando mayúscula es igual a la posición
-  document.write(
-    `<h2>La validación de tu DNI es correcta, tu DNI es ${userDni} </h2>`
-  );
-} else {
-  //De lo contrario, te corrige el dni
-  document.write(
-    `(<h2>La letra de tu DNI no coincide, tu DNI debería ser ${numUserDni}${letra.charAt(
-      pos
-    )}) </h2>`
-  );
-}
-
 // 15 - Vamos a validar correctamente un código postal español. Para ello solo hay que tener en cuenta que su valor irá del 01000 al 52999. ¿Funcionaría con el código 47512?
-
+codPosReg = /(^[1-4][0-9]{4}$)|(^[5][0-2][0-9]{3}$)|(^[0][1-9][0-9]{3}$)/;
 //17 - Una dirección IP , ¿Cómo harías para que admitiera direcciones como 192.6.0.27?
+let ipAddReg =
+  /(((^([01]?[0-9]?[0-9]))|(^2[0-4][0-9])|(^25[0-5]))\.)(((([01]?[0-9]?[0-9]))|(2[0-4][0-9])|(25[0-5]))\.){2}((([01]?[0-9]?[0-9])$)|(2[0-4][0-9]$)|(25[0-5]$))/;
