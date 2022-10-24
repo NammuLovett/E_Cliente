@@ -31,9 +31,17 @@ while (userName.length == 0 || !userDni.match(dniReg)) {
     'Por favor introduce tu DNI válido, debe tener los 9 caracteres, 8 números y una letra válida al final'
   );
 }
-
 // 15 - Vamos a validar correctamente un código postal español. Para ello solo hay que tener en cuenta que su valor irá del 01000 al 52999. ¿Funcionaría con el código 47512?
-codPosReg = /(^[1-4][0-9]{4}$)|(^[5][0-2][0-9]{3}$)|(^[0][1-9][0-9]{3}$)/;
+let codPosReg = /(^[1-4][0-9]{4}$)|(^[5][0-2][0-9]{3}$)|(^[0][1-9][0-9]{3}$)/;
+
+while (codPosReg.length == 0 || !usercodPos.match(codPosReg)) {
+  let usercodPos = prompt('Por favor introduce un código postal válido');
+}
+
 //17 - Una dirección IP , ¿Cómo harías para que admitiera direcciones como 192.6.0.27?
 let ipAddReg =
   /(((^([01]?[0-9]?[0-9]))|(^2[0-4][0-9])|(^25[0-5]))\.)(((([01]?[0-9]?[0-9]))|(2[0-4][0-9])|(25[0-5]))\.){2}((([01]?[0-9]?[0-9])$)|(2[0-4][0-9]$)|(25[0-5]$))/;
+
+while (ipAddUser.length == 0 || !ipAddUser.match(codPosReg)) {
+  let ipAddUser = prompt('Por favor introduce una IP válida');
+}
