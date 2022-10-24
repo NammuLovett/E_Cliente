@@ -32,10 +32,11 @@ while (userName.length == 0 || !userDni.match(dniReg)) {
   );
 }
 // 15 - Vamos a validar correctamente un código postal español. Para ello solo hay que tener en cuenta que su valor irá del 01000 al 52999. ¿Funcionaría con el código 47512?
+let usercodPos = '';
 let codPosReg = /(^[1-4][0-9]{4}$)|(^[5][0-2][0-9]{3}$)|(^[0][1-9][0-9]{3}$)/;
 
 while (codPosReg.length == 0 || !usercodPos.match(codPosReg)) {
-  let usercodPos = prompt('Por favor introduce un código postal válido');
+  usercodPos = prompt('Por favor introduce un código postal válido');
 }
 
 //17 - Una dirección IP , ¿Cómo harías para que admitiera direcciones como 192.6.0.27?
