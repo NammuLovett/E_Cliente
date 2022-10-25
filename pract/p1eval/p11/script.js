@@ -38,3 +38,8 @@ let ipAddReg =
 while (!ipAddReg.test(ipAddUser)) {
   ipAddUser = prompt('Por favor introduce una IP válida');
 }
+
+document.write(`<h2>Su nombre es ${userName}<br>
+Su DNI es ${userDni} <br>
+su Código postal es ${usercodPos} <br>
+su IPV4 es ${ipAddUser}</h2>`);
