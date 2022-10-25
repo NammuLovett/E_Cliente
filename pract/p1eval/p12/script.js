@@ -55,3 +55,8 @@ const webReg =
 while (!webReg.test(web)) {
   web = prompt('valide una URL');
 }
+
+document.write(`<h2>Su nombre completo es ${userName}<br>
+Su fecha de nacimiento es ${date} <br>
+su email es ${email} <br>
+su web es ${web}</h2>`);
