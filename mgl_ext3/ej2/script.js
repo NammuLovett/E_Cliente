@@ -1,11 +1,8 @@
-'use strict';
-
-document.write('hola');
-
 let userString = 'yo hago yoga hoy';
-userString = userString.replace(/\s/g, ''); //quitar los espacios a la cadena
 
 function esPalindromo(userString) {
+  userString = userString.replace(/\s/g, ''); //quitar los espacios a la cadena
+  userString = userString.toLowerCase(userString); //paso todos los caracteres a minúscula
   //recibe variable (array en este caso)
   capicua = true;
   let j = userString.length - 1; //almacena el tamaño del array -1 para indicar la última posición
@@ -19,4 +16,4 @@ function esPalindromo(userString) {
   return capicua;
 }
 
-esPalindromo(userString);
+alert(esPalindromo(userString));

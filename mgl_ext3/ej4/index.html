@@ -8,19 +8,18 @@
   </head>
   <body>
     <script>
-      'use strict';
-      userPoem = '';
-      regExp = /^([A-zÁÉÍÓÚáéíóúÑñ])$/;
-      while (!userNameReg.test(userName)) {}
+      frase = []; //almacena poemas en array
+      regExp = /^([A-zÁÉÍÓÚáéíóúÑñ])$/; //regEx az y caracteres españoles
+      while ((frase.valueOf() == ' ') | regExp.test(frase)) {
+        //mientras que la variable frase no sea un espacio, pide poemas
+        frase = prompt('Escribe el poemita');
+      }
 
-      let parImpar = (value) => {
-        return value % 2 == 0 ? 'par' : 'impar';
-      };
+      function randomFrase(frase) {
+        let frase = frase[Math.floor(Math.random() * frase.length)]; //saco un número del array frase aleatorio
+      }
 
-      setInterval(func, 1000);
-      setTimeout;
-
-      document.write(parImpar(78));
+      document.write(setInterval(randomFrase, 2000)); //muestro por pantallala frase
     </script>
   </body>
 </html>
