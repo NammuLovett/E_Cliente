@@ -29,14 +29,15 @@ while (!dateReg.test(date)) {
 ✓ El texto después de la arroba puede estar compuesto por letras, números, guiones, uno o dos puntos
 y un dominio principal de 2 o más caracteres. */
 
-/* let email = '';
-const emailReg = /^[a - z]$/;
+let email = '';
+const emailReg =
+  /^[A-z0-9ÁÉÍÓÚÜÇÑáéíóúüçñ\._%\+\-]+@[A-z0-9ÁÉÍÓÚÜÇÑáéíóúüçñ\-]+(\.[A-z0-9ÁÉÍÓÚÜÇÑáéíóúüçñ\-]+)?\.[A-z]{2,}$/;
 while (!emailReg.test(email)) {
   email = prompt(
     'Ponga el Email - El texto antes de la arroba podrá tener letras, números y/o los símbolos ._%+- El texto después de la arroba puede estar compuesto por letras, números, guiones, uno o dos puntos y un dominio principal de 2 o más caracteres'
   );
 }
- */
+
 /* Ejercicio 25.- Realiza una expresión regular que valide una URL.
 ✓ Debe admitir http:// y https:// o ninguno de ellos
 ✓ El dominio estará formado por uno o más números, letras, puntos o guiones seguido de otro punto y
@@ -45,10 +46,12 @@ luego de dos a seis letras o puntos.
 Ejemplos que podría validar:
 ✓ https://www.iespuertasdelcampo.es/recursos/javascript/
 ✓ www.todoJS.edu.es/
+(http:\/\/|https:\/\/)?www\.[A-z\.]+\.[a-z]{2,}(\/[A-z\/]+\/)?$
  */
 
 let web = '';
-const webReg = /^(https:?|http:?|[wW]{3}?)\.(\w*\.)+[\w-]{2,4}$/;
+const webReg =
+  /^(https:\/\/|http:\/\/|[wW]{3}\.)?([wW]{3}\.)?(\w*\.)+[\w-]{2,}(\/[\w\/]+\/)?(\/)?$/;
 while (!webReg.test(web)) {
   web = prompt('valide una URL');
 }
