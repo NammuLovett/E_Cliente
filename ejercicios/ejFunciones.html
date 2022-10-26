@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es-es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones</title>
+  </head>
+  <body>
+    <script>
+      /* Ejercicio 3.- Crea una función de tipo flecha que devuelva true si un número es par y false si es impar.
+      Probar su funcionamiento. */
+
+      'use strict';
+
+      let parImpar = (value) => {
+        return value % 2 == 0 ? 'par' : 'impar';
+      };
+
+      /* Ejercicio 4.- Crea y llamar a una función arrow que recibe el ancho y el alto de un rectángulo y calcula su
+superficie. Probar su funcionamiento. */
+
+      let areaCuadrado = (base, altura) => {
+        return base * altura;
+      };
+
+      /* Ejercicio 5.- Crear y llamar a una función flecha que recibe la base y la altura de un triángulo y calcula su
+área. Área triángulo = base*altura/2 */
+
+      let areaTriangulo = (base, altura) => {
+        return (base * altura) / 2;
+      };
+
+      let perimetroCirc = (radio) => {
+        return 2 * Math.PI * radio;
+      };
+
+      let areaCirc = (radio) => {
+        return Math.PI * radio * radio;
+      };
+      parImpar(5);
+
+      parImpar(5);
+      areaCuadrado(2, 5);
+      areaTriangulo(2, 5);
+      perimetroCirc(10);
+      areaCirc(10);
+    </script>
+  </body>
+</html>
