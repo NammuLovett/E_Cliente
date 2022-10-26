@@ -90,9 +90,9 @@
       function mediaSpread(...numeros) {
         let resultado = 0;
         for (const v of numeros) {
-          resultado += v / numeros;
+          resultado += v;
         }
-        return resultado;
+        return resultado / numeros.length;
       }
       console.log(mediaSpread(10, 10, 10, 10));
       //arguments
@@ -100,9 +100,9 @@
         let total = 0;
         console.log(mediaArg.arguments.length);
         for (const n of mediaArg.arguments) {
-          resultado += n / mediaArg.arguments;
+          resultado += n;
         }
-        return resultado;
+        return resultado / mediaArg.arguments;
       }
       console.log(mediaArg(10, 10, 10, 10));
     </script>
