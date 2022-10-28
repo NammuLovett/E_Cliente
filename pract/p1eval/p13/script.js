@@ -68,17 +68,6 @@ function creaTabla(fil, col, min) {
     document.write('</tr>');
   }
 
-  //document.write("<table>");
-
-  /*for (i = 0; i < fil; i++) {
-                document.write("<tr>");
-                for (j = 0; j < col; j++) {
-                    document.write('<td>' + minas[i][j] + '</td>');
-                    //document.write(`<td></td>`);
-                }
-                document.write("</tr>");
-            }*/
-
   document.write('</table>');
 }
 
