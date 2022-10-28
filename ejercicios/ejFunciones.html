@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es-es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones</title>
+  </head>
+  <body>
+    <script>
+      /* Ejercicio 3.- Crea una función de tipo flecha que devuelva true si un número es par y false si es impar.
+                        Probar su funcionamiento. */
+
+      let parImpar = (value) => {
+        return value % 2 == 0 ? 'par' : 'impar';
+      };
+      ('use strict');
+
+      /* Ejercicio 4.- Crea y llamar a una función arrow que recibe el ancho y el alto de un rectángulo y calcula su
+                  superficie. Probar su funcionamiento. */
+
+      let areaCuadrado = (base, altura) => {
+        return base * altura;
+      };
+
+      /* Ejercicio 5.- Crear y llamar a una función flecha que recibe la base y la altura de un triángulo y calcula su
+                  área. Área triángulo = base*altura/2 */
+
+      let areaTriangulo = (base, altura) => {
+        return (base * altura) / 2;
+      };
+      /*Ej6*/
+      let perimetroCirc = (radio) => {
+        return 2 * Math.PI * radio;
+      };
+      /*ej7*/
+      let areaCirc = (radio) => {
+        return Math.PI * radio * radio;
+      };
+      parImpar(5);
+
+      alert(
+        parImpar(5) +
+          '/' +
+          areaCuadrado(2, 5) +
+          '/' +
+          areaTriangulo(2, 5) +
+          '/' +
+          perimetroCirc(10) +
+          '/' +
+          areaCirc(10)
+      );
+
+      /*ej8 - Dado un cierto array, se pide una función IIFE que muestre los valores pares.*/
+      let varArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      (function () {
+        for (let i = 0; i < varArray.length; i++) {
+          if (varArray[i] % 2 == 0) {
+            console.log([varArray[i]]);
+          }
+        }
+      })(varArray);
+
+      /*ej9 - Crear una función que muestre un alert con el mensaje que se le envíe. Deberá tener el
+            mensaje por defecto “Pulse Aceptar para continuar”. Probar la función llamándola con y sin argumentos.*/
+
+      function mensaje(menString = 'Pulse aceptar para continuar') {
+        alert(menString);
+      }
+      mensaje();
+      mensaje('hola caracola');
+
+      /*  Ejercicio 10.- Modifica el último código del punto IV.4 para que funcione recibiendo un array como
+      argumento. */
+
+      varArray = [1, 1, 1, 1, 1];
+      function sumaArray(varArray) {
+        let resultado = 0;
+        for (const v of varArray) {
+          resultado += v;
+        }
+        return resultado;
+      }
+
+      console.log(sumaArray(varArray));
+
+      /*Ejercicio 11.- Realizar una función que calcule la media aritmética de cualquier número de valores recibido. Además, deberá mostrar los valores empleados y el número de estos. Hacer este ejercicio usando el operador de propagación (11.a) y usando la propiedad arguments (11.b).*/
+
+      //SPREAD
+      function mediaSpread(...numeros) {
+        let resultado = 0;
+        for (const v of numeros) {
+          resultado += v;
+        }
+        return resultado / numeros.length;
+      }
+      console.log(mediaSpread(10, 10, 10, 10));
+      //arguments
+      function mediaArg() {
+        let total = 0;
+        console.log(mediaArg.arguments.length);
+        for (const n of mediaArg.arguments) {
+          resultado += n;
+        }
+        return resultado / mediaArg.arguments;
+      }
+      console.log(mediaArg(10, 10, 10, 10));
+    </script>
+  </body>
+</html>
