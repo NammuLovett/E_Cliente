@@ -1,4 +1,4 @@
-//INFO
+fig; //INFO
 /* 
 La entrada de datos serán números enteros superiores o iguales a 2.
 o Las filas y/o columnas no podrán ser superiores a 20.
