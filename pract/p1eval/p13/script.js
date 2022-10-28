@@ -57,7 +57,7 @@ function creaTabla(fil, col, min) {
 
     for (j = 0; j < col; j++) {
       if (minas[i][j] == 'X') {
-        document.write('<td>*</td>');
+        document.write('<td>💣</td>');
       } else {
         document.write(`<td>${cuentaMinas(i, j, minas, fil, col)}</td>`);
         //${cuentaMinas(fil, col, minas)}
