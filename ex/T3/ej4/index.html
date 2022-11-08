@@ -4,22 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Poemario Set Interval</title>
   </head>
   <body>
     <script>
-      frase = []; //almacena poemas en array
-      regExp = /^([A-zÁÉÍÓÚáéíóúÑñ])$/; //regEx az y caracteres españoles
-      while ((frase.valueOf() == ' ') | regExp.test(frase)) {
-        //mientras que la variable frase no sea un espacio, pide poemas
-        frase = prompt('Escribe el poemita');
-      }
+      /*
+      El usuario introducirá refranes hasta que introduzca el carácter vacío. Estos serán guardados en un array.
+      El programa mostrará en el documento web refranes aleatorios cada dos segundos unando la funcion setInterval (funcion ms)
+      La introducción de los datos deberá estar validada del modo que se vea más conveniente (aconsejo regexp) saviendo que no se admitirán números ni carácteres no alfanuméricos.
+      El código será escrito en el mismo documento html.       
+      */
+      randomFrase();
 
-      function randomFrase(frase) {
-        let frase = frase[Math.floor(Math.random() * frase.length)]; //saco un número del array frase aleatorio
+      function randomFrase() {
+        let frases = []; //almacena poemas en array
+        let regExp = /^([A-zÁÉÍÓÚáéíóúÑñ\s])$/; //regEx az y caracteres españoles
+        let frase = prompt('Escribe poema');
+        while ((frase.valueOf() != ' ') | regExp.test(frase)) {
+          //mientras que la variable frase no sea un espacio, pide poemas
+          frase = prompt('Escribe el poemita');
+        }
+        frases[Math.floor(Math.random() * frases.length)]; //saco un número del array frase aleatorio
       }
-
-      document.write(setInterval(randomFrase, 2000)); //muestro por pantallala frase
+      document.write(setInterval(randomFrase, 2000)); //muestro por pantalla la frase
     </script>
   </body>
 </html>
+valueOf
