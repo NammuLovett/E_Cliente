@@ -37,17 +37,17 @@ function Coche(marca, combustible) {
   };
 
   this.getCombustible = function () {
-    return this.marca;
+    return this.combustible;
   };
   this.setCombustible = function (combustible) {
-    this.marca = combustible;
+    this.combustible = combustible;
   };
 
   this.getCantidad = function () {
-    return this.marca;
+    return this.cantidad;
   };
   this.setCantidad = function (cantidad) {
-    this.marca = marca;
+    this.cantidad = cantidad;
   };
 
   this.rellenarDeposito = function (litros) {
@@ -56,12 +56,11 @@ function Coche(marca, combustible) {
 
   this.muestraConf = function () {
     console.log(
-      `marca: ${this.getMarca()}, tipo de combustible ${this.combustible()},litros del depósito: ${this.getCantidad()} }`
+      `marca: ${this.getMarca()}, tipo de combustible: ${this.getCombustible()}, litros del depósito: ${this.getCantidad()} }`
     );
   };
 }
 
 let cocheUno = new Coche('BMW', 'gasoil');
-cocheUno.muestraConf;
-
-console.log();
+cocheUno.setCantidad(500);
+cocheUno.muestraConf();
