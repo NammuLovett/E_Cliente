@@ -20,4 +20,11 @@ function Cometa(diametro, temperatura, nombre) {
   this.getNum = function () {
     return this.num;
   };
+
+function Asteroide (diametro, temperatura, nombre)
+this.__proto__ = new Cometa(10,22,"pepito");
+
+function Roquita (diametro, temperatura, nombre)
+// meteo1(15, 43, "c18") = Object.create(Cometa);
+this.__proto__=new Cometa (20,26,"meteo1");
 }
