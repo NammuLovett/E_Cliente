@@ -16,7 +16,7 @@ o El número de minas nunca podrá ser igual o superior a columnas x filas /2. *
  - minasCerca() que recorra el tablero marcando en cada casilla las minas que hay alrededor.
  - dibujaTablero() que dibuje el tablero en una página web. Recibe como argumentos las filas y columnas. Rellenará el tablero de ceros o falses. */
 
-insertaDatos();
+insertaDatos(); //función para insertar datos
 
 function insertaDatos() {
   do {
@@ -38,12 +38,11 @@ function insertaDatos() {
     min != false
   );
 
-  //console.log("Termina pedir datos");
   creaTabla(fil, col, min);
 }
 
 function creaTabla(fil, col, min) {
-  //console.log("Entra creaTabla");
+  //Crea la tabla con los datos
   console.log(`Filas:  ${fil}`);
   console.log(`Cols:  ${col}`);
   console.log(`Minas:  ${min}`);
@@ -60,9 +59,7 @@ function creaTabla(fil, col, min) {
         document.write('<td>💣</td>');
       } else {
         document.write(`<td>${cuentaMinas(i, j, minas, fil, col)}</td>`);
-        //${cuentaMinas(fil, col, minas)}
       }
-      //document.write(`<td></td>`);
     }
 
     document.write('</tr>');
@@ -70,10 +67,8 @@ function creaTabla(fil, col, min) {
 
   document.write('</table>');
 }
-
+//pone celda aleatoria
 function celdaAleatoria(fil, col, min) {
-  //console.log("Entra celdaAleatoria");
-
   const celdaRandom = new Array(fil);
   const alFila = new Array();
   const alCol = new Array();
@@ -83,24 +78,12 @@ function celdaAleatoria(fil, col, min) {
     celdaRandom[i] = new Array(col);
   }
 
-  //console.log(celdaRandom);
-
   while (numMinas < min) {
-    //console.log(numMinas);
-
-    //console.log(celdaRandom.length);
-    //console.log(min);
-
     numAlFila = parseInt(Math.random() * fil);
-    //alFila[i] = numAlFila;
     numAlCol = parseInt(Math.random() * col);
-    //alCol[i] = numAlCol;
 
     for (j = 0; j < fil; j++) {
       for (k = 0; k < col; k++) {
-        //console.log(`Fila ${j} => ${numAlFila}`);
-        //console.log(`Col ${k} => ${numAlCol}`);
-
         if (j == numAlFila) {
           if (k == numAlCol) {
             if (celdaRandom[j][k] != 'X') {
@@ -124,6 +107,7 @@ function celdaAleatoria(fil, col, min) {
   return celdaRandom;
 }
 
+//recorre array para darte las minas
 function cuentaMinas(i, j, minas, fil, col) {
   minaCerca = 0;
 
