@@ -82,12 +82,12 @@ function Portatil(
 }
 
 let pc1 = new Ordenador('dell', 'Oblivion');
-let pc2 = new Ordenador('benQ', 'luxe', 32, 1024, 20);
+let pc2 = new Ordenador('benQ', 'luxe', 64, 2048, 100);
 
 let portatil1 = new Portatil('mac', 'PRO');
-let portatil2 = new Portatil('razorblade', 'Xpert', 16, 256, 15, 10);
+let portatil2 = new Portatil('razorblade', 'Xpert', 50, 512, 50, 100);
 
 console.log(pc1.toString());
-console.log(pc1.toString());
+console.log(pc2.toString());
 console.log(portatil1.toString());
 console.log(portatil2.toString());
