@@ -18,9 +18,7 @@ const pedido = `{"idPedido":"faa-8444","pedidos":[{"idProducto":"info005","nombr
 const map = new Map(Object.entries(JSON.parse(pedido)));
 
 //document print
-document.write(
-  '<p><strong>idpedido:     ' + map.get('idPedido') + '<strong></p>'
-);
+document.write('<p><strong>idpedido: ' + map.get('idPedido') + '<strong></p>');
 
 document.write('<table>');
 document.write('<tr>');
