@@ -10,6 +10,7 @@ La validación de datos consistirá en:
  - Las filas y/o columnas no podrán ser superiores a 20.
 o El número de minas nunca podrá ser igual o superior a columnas x filas /2. */
 //FUNCIONES
+
 /* 
  - insertaMinas() a la que le pasemos el tablero buscaminas (sería un array de dos dimensiones) y coloque en él de manera aleatoria las minas.
  - nMinasPos() que reciba el array del tablero y una posición en él.     Devolverá las minas alrededor de esa posición.
