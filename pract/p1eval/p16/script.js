@@ -32,7 +32,7 @@ document.write('</tr>');
 
 //iteración del map
 for (let i = 0; i < map.get('pedidos').length; i++) {
-  document.write('<tr>');
+  document.write('<tr>'); //mete fila
   document.write(`<td class="productos">Producto ${i}</td>`);
   document.write(`<td>${map.get('pedidos')[i].idProducto}</td>`);
   document.write(`<td>${map.get('pedidos')[i].nombre}</td>`);
