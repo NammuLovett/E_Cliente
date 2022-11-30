@@ -3,9 +3,11 @@
 del usuario. Al pasar 10 segundos la ventana creada se cerrará. */
 
 let ventana = () => {
+  //metemos en una variable para abrir la ventana
   let vent = window.open('', '', 'width=300,height=450');
-  vent.document.write('Texto ventana');
+  vent.document.write('Esta ventana se cerrará en 5 segundos');
 
+  //hay que meter en una function el .close para que funcione
   setTimeout(function () {
     vent.close();
   }, 5000);
