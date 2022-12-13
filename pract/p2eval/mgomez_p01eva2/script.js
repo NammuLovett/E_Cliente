@@ -4,6 +4,6 @@ function abreGoogle() {
 }
 
 //En caso de que pasen 5 segundos te envía a duckduckgo
-var tiempo = setTimeout(function () {
+let tiempo = setTimeout(function () {
   location.href = 'https://duckduckgo.com/';
 }, 5000);
