@@ -2,7 +2,7 @@
 const body = document.getElementById('cuerpo');
 
 //Recorremos la altura de la página
-height = body.scrollHeight;
+let height = body.scrollHeight;
 
 //Comenzamos una cuenta atrás de 5 segundos que, al finalizar, nos envíe al final de la página
 const tiempo = setTimeout(function () {
