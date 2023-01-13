@@ -1,5 +1,7 @@
 let parrafos = document.getElementsByTagName('p');
 
-for (let parrafo of parrafos) {
-  let text = parrafo[].textContent;
+for (let p of parrafos) {
+  let text = p.textContent;
 }
+
+let numPalabras = text.split(' ').length;
