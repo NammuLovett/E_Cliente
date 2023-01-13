@@ -1,7 +1,9 @@
-let parrafos = document.getElementsByTagName('p');
+var parrafos = document.getElementsByTagName('p');
+var palabras = 0;
 
 for (let p of parrafos) {
-  let text = p.textContent;
+  var text = p.textContent;
+  palabras = palabras + text.split(' ').length;
 }
 
-let numPalabras = text.split(' ').length;
+console.log(palabras);
