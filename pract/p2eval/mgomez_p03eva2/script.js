@@ -19,7 +19,6 @@ nuevo.textContent = texto;
 
 //Recogemos la posición de la lista mediante su id
 let lista = document.getElementById(`li${pos}`);
-console.log('🚀 ~ file: index.html ~ line 44 ~ pos', pos);
 
 //Recogemos la lista padre
 let listaPadre = document.getElementById('lista');
