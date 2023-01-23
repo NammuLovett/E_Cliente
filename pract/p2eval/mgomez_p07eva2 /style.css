@@ -10,13 +10,27 @@
 body {
   background-color: #ffd54f;
 }
-
+h1 {
+  font-weight: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+.container {
+  color: #333;
+  margin: 0 auto;
+  text-align: center;
+}
 div {
   text-align: center;
   font-size: 60px;
   margin-top: 10%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
 }
 
 .days:after {
