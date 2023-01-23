@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+main {
+  width: 40%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+td,
+th {
+  padding: 4vh 4vw;
+  text-align: center;
+}
+
+/* Formato Chachi*/
+.styletd {
+  border: 10px rgb(255, 0, 106) double;
+  border-radius: 50px;
+  background-color: rgb(255, 127, 238);
+  text-decoration: overline;
+  font-size: 2rem;
+}
+
+/* Pone el texto en MAY */
+.mayus {
+  font-variant: small-caps;
+}
