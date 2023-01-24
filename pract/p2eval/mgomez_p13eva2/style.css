@@ -1,0 +1,14 @@
+.origen {
+  display: inline-block;
+  width: 30vw;
+  height: 10vh;
+  opacity: 50;
+  background-color: yellow;
+}
+
+.destino {
+  display: inline-block;
+  width: 30vw;
+  height: 10vh;
+  border: 2px solid black;
+}
