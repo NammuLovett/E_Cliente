@@ -7,15 +7,23 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Contador de visitas con cookies</h1>
-    <p>
-      Esta página utiliza cookies para contar el número de visitas. Acepte para
-      continuar.
-    </p>
-    <button onclick="aceptarCookies()">Aceptar</button>
-    <button onclick="rechazarCookies()">Rechazar/Cancelar</button>
-    <button onclick="cerrarSesion()">Cerrar sesión</button>
-    <p id="mensaje"></p>
+    <div id="cookie-panel">
+      <p>
+        Esta página utiliza cookies. Al continuar navegando por la página,
+        aceptas el uso de cookies.
+      </p>
+      <button onclick="aceptarCookies()">Aceptar</button>
+      <button onclick="cancelarCookies()">Cancelar</button>
+      <button onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+
+    <div id="contador-panel" style="display: none">
+      <p>Has visitado esta página</p>
+      <p id="contador"></p>
+      <p>veces.</p>
+      <button onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

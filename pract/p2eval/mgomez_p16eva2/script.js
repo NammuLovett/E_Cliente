@@ -1,31 +1,54 @@
+/* La variable "contador" es un contador de visitas inicializado en 0. */
+let contador = 0;
+
+/* La función "aceptarCookies" se ejecuta cuando el usuario acepta las cookies y 
+crea una cookie llamada "visitas" con un valor de 1 y una duración de un año. 
+También se muestra el panel del contador de visitas y se oculta el panel de las cookies. */
 function aceptarCookies() {
-  document.cookie = 'contadorVisitas=1'; // establece una cookie llamada "contadorVisitas" con un valor de 1
-  document.getElementById('mensaje').innerHTML = 'Cookies aceptadas'; // cambia el contenido del elemento con id "mensaje" a "Cookies aceptadas"
-}
-function rechazarCookies() {
-  document.cookie =
-    'contadorVisitas=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'; // elimina la cookie "contadorVisitas"
-  document.getElementById('mensaje').innerHTML = 'Cookies rechazadas'; // cambia el contenido del elemento con id "mensaje" a "Cookies rechazadas"
-}
-function cerrarSesion() {
-  document.cookie =
-    'contadorVisitas=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'; // elimina la cookie "contadorVisitas"
-  document.getElementById('mensaje').innerHTML = 'Sesión cerrada'; // cambia el contenido del elemento con id "mensaje" a "Sesión cerrada"
+  // Creamos una cookie con el nombre "visitas" y valor "1", con duración de 1 año
+  document.cookie = `visitas=1; max-duration=60*60*24*365`;
+
+  // Mostramos el panel del contador
+  mostrarContador();
+
+  // Ocultamos el panel de las cookies
+  document.getElementById('cookie-panel').style.display = 'none';
 }
 
-function contarVisitas() {
-  let cookies = document.cookie.split(';'); // divide la cadena de cookies en un array de cookies
-  for (let i = 0; i < cookies.length; i++) {
-    // recorre el array de cookies
-    let nombre = cookies[i].split('=')[0].trim(); // obtiene el nombre de la cookie actual
-    let valor = cookies[i].split('=')[1].trim(); // obtiene el valor de la cookie actual
-    if (nombre == 'contadorVisitas') {
-      // comprueba si la cookie actual se llama "contadorVisitas"
-      document.getElementById('mensaje').innerHTML =
-        'Número de visitas: ' + valor; // muestra el número de visitas en el elemento con id "mensaje"
-      document.cookie = 'contadorVisitas=' + (parseInt(valor) + 1); // actualiza el valor de la cookie "contadorVisitas" sumando 1 al valor actual
-      return; // sale de la función
-    }
-  }
-  document.getElementById('mensaje').innerHTML = 'No se han encontrado cookies'; // si no se encuentra la cookie "contadorVisitas", muestra el mensaje "No se han encontrado cookies"
+/* La función "cancelarCookies" se ejecuta cuando el usuario cancela la aceptación de las cookies y se oculta el panel de las cookies. */
+
+function cancelarCookies() {
+  document.getElementById('cookie-panel').style.display = 'none';
+}
+
+/* La función "mostrarContador" se ejecuta para mostrar el panel del contador de visitas. Incrementa el valor del contador, 
+actualiza la cookie "visitas" con el valor actualizado del contador y actualiza el texto del panel del contador 
+con el valor actual del contador. */
+function mostrarContador() {
+  contador++;
+  document.cookie = `visitas=${contador}; max-age=31536000`;
+  document.getElementById('contador-panel').style.display = 'block';
+  document.getElementById('contador').innerText = contador;
+}
+
+/* La función "cerrarSesion" se ejecuta cuando el usuario cierra la sesión y elimina la cookie "visitas". 
+Reinicia el valor del contador a 0, muestra el panel de las cookies y oculta el panel del contador de visitas. */
+
+function cerrarSesion() {
+  document.cookie = 'visitas=; max-age=0';
+  contador = 0;
+  document.getElementById('cookie-panel').style.display = 'block';
+  document.getElementById('contador-panel').style.display = 'none';
+}
+
+/* La variable "visitas" comprueba si existe una cookie "visitas" y si es así, se actualiza el valor del contador 
+y se muestra el panel del contador de visitas. Si no hay una cookie "visitas", se muestra el panel de las cookies. */
+
+let visitas = document.cookie.match(/visitas=([^;]+)/);
+
+if (visitas) {
+  contador = Number(visitas[1]);
+  mostrarContador();
+} else {
+  document.getElementById('cookie-panel').style.display = 'block';
 }
